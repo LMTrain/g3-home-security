@@ -1,12 +1,10 @@
-module.exports = function(sequelize, DataTypes) {
+module.exports = function (sequelize, DataTypes) {
   var Device = sequelize.define("Device", {
-    name: DataTypes.STRING,
-    description: DataTypes.TEXT,
-    status: {
-      type: DataTypes.BOOLEAN,
-      allowNull: false,
-      defaultValue: false
-    }
+    device: DataTypes.STRING,
+    status: DataTypes.BOOLEAN,
   });
   return Device;
 };
+
+
+
