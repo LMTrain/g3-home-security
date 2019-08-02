@@ -1,14 +1,14 @@
 // The Device API object contains methods for each kind of request we'll make
 var deviceAPI = {
 
-  getDevice: function () {
+  getDevice: function() {
     return $.ajax({
       url: "api/devices",
       type: "GET"
     });
   },
 
-  saveDevice: function (device) {
+  saveDevice: function(device) {
     return $.ajax({
       headers: {
         "Content-Type": "application/json"
@@ -19,7 +19,7 @@ var deviceAPI = {
     });
   },
 
-  removeDevice: function (id) {
+  removeDevice: function(id) {
     return $.ajax({
       url: "api/devices/" + id,
       type: "DELETE"
@@ -28,9 +28,9 @@ var deviceAPI = {
 };
 
 // showDevices gets new devices from the db and populates the list
-var showDevices = function () {
-  deviceAPI.getDevice().then(function (data) {
-    var $devices = data.map(function (device) {
+var showDevices = function() {
+  deviceAPI.getDevice().then(function(data) {
+    var $devices = data.map(function(device) {
       var $a = $("<a>")
         .text(device.device)
         .attr("href", "/device/" + device.id);
