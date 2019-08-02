@@ -21,7 +21,7 @@ var userAPI = {
         "Content-Type": "application/json"
       },
       type: "POST",
-      url: "api/users",
+      url: "api/users",git
       data: JSON.stringify(user)
     });
   },
